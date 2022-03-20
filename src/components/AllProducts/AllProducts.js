@@ -16,11 +16,12 @@ const AllProducts = (props) => {
             <h1>All Products</h1>
             <div className="row container">
                 {
-                    products.map(pd =>
+                    products.map((pd, index) =>
                         <SingleProduct
                             setCartCount={setCartCount}
                             product={pd}
-                            key={pd.id}
+                            // key={pd.id}
+                            key={index} //id na thakle index use hobe
                         > </SingleProduct>)
                 }
             </div>
